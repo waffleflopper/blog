@@ -5,6 +5,8 @@
   font-family: 'Open Sans';
   --color-bg: #ffffff;
   --color-text: #000000;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
 
   /* navbar */
   --nav-text-primary: #b6b6b6;
@@ -32,8 +34,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 main {
-  margin-left: 6rem;
+  margin-left: 5rem;
   padding: 1rem;
+  background: var(--bg-secondary);
+  height: 100vh;
 }
 
 @media only screen and (max-width: 600px) {
