@@ -4,12 +4,12 @@ interface Props {
     
 }
 
-const PostPage = (props: Props) => {
+const messages = (props: Props) => {
     return (
         <main>
-            <h1>Post</h1>
+            <h1>Messages</h1>
         </main>
     )
 }
 
-export default PostPage
+export default messages

@@ -6,9 +6,9 @@ interface Props {
 
 const AdminPostPage = (props: Props) => {
     return (
-        <div>
-            
-        </div>
+        <main>
+            <h1>Write a post or w/e</h1>
+        </main>
     )
 }
 

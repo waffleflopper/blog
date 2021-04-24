@@ -1,6 +1,7 @@
 import React from 'react'
 import Loader from '../components/Loader'
 import toast from 'react-hot-toast'
+import Link from 'next/link'
 
 interface Props {
   

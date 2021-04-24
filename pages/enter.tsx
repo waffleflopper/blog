@@ -6,9 +6,9 @@ interface Props {
 
 const Page = (props: Props) => {
     return (
-        <div>
+        <main>
             <h1>Sign Up</h1>
-        </div>
+        </main>
     )
 }
 
