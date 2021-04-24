@@ -1,48 +1,102 @@
-
-
-.nav {
-    height: 70px;
-    width: 100%;
-    background: white;
-    color: var(--color-text);
+.navbar {
     position: fixed;
-    top: 0;
-    padding: 0 10vw;
-    font-weight: bold;
-    border-bottom: 1px solid var(--color-gray);
-    z-index: 99;
-}
-
-.nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: var(--nav-bg-primary);
+    transition: width 200ms ease;
     height: 100%;
 }
 
-.roundImg {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
+.navbarNav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
 }
 
-.btnHome {
-    background-color: var(--color-text);
-    color: white;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    padding: 0.5rem 1rem;
+.navItem {
+    width: 100%;
 }
 
-.btnAdmin, .btnEnter {
-    background-color: var(--color-blue);
-    color: white;
+.navItem:last-child {
+    margin-top: auto;
 }
 
-.pushRight {
-    margin-left: auto;
+.navLink {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--nav-text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacityh(0.78);
+    transition: var(--nav-transition-speed);
+}
+
+.navLink:hover {
+    filter: grayscale(0) opacity(1);
+    background: var(--nav-bg-secondary);
+    color: var(--nav-text-secondary);
+}
+
+.navItem .active {
+    background: var(--nav-bg-secondary);
+    color: var(--nav-icon-color);
+    filter: grayscale(0) opacity(1);
+}
+
+.navLink svg {
+    width: 2rem;
+    margin: 0 1.5rem;
+    color: var(--nav-icon-color);
+    transition: var(--nav-transition-speed);
+}
+
+.linkText {
+    display: none;
+    margin-left: 1rem;
+}
+
+.navbar:hover .linkText {
+    display: block;
+}
+
+.icon {
+    width: 4rem;
+    min-width: 2rem;
+}
+
+/* small */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+    .navbar:hover .linkText {
+        display: none;
+    }
+    .navbarNav {
+        flex-direction: row;
+    }
+    .navLink {
+        justify-content: center;
+    }
+    .icon {
+        width: auto;
+    }
+}
+/* default */
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+    .navbar:hover {
+        width: 16rem;
+    }
+    .navbar:hover .linkText {
+        display: inline;
+    }
 }
