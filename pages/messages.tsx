@@ -1,15 +1,13 @@
-import React from 'react'
+import React from "react";
 
-interface Props {
-    
-}
+interface Props {}
 
 const messages = (props: Props) => {
-    return (
-        <main>
-            <h1>Messages</h1>
-        </main>
-    )
-}
+  return (
+    <main>
+      <h1>Messages</h1>
+    </main>
+  );
+};
 
-export default messages
+export default messages;

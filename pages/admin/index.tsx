@@ -1,15 +1,13 @@
-import React from 'react'
+import React from "react";
 
-interface Props {
-    
-}
+interface Props {}
 
 const AdminPostPage = (props: Props) => {
-    return (
-        <main>
-            <h1>Write a post or w/e</h1>
-        </main>
-    )
-}
+  return (
+    <main>
+      <h1>Write a post or w/e</h1>
+    </main>
+  );
+};
 
-export default AdminPostPage
+export default AdminPostPage;

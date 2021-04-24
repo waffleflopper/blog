@@ -1,20 +1,19 @@
-import React from 'react'
-import Loader from '../components/Loader'
-import toast from 'react-hot-toast'
-import Link from 'next/link'
+import React from "react";
+import Loader from "../components/Loader";
+import toast from "react-hot-toast";
+import Link from "next/link";
 
-interface Props {
-  
-}
-
+interface Props {}
 
 const Home = (props: Props) => {
   return (
     <main>
-      <Loader show={false}/>
-      <button onClick={() => toast.success('toast message test')} >Toast it</button>
+      <Loader show={false} />
+      <button onClick={() => toast.success("toast message test")}>
+        Toast it
+      </button>
     </main>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
