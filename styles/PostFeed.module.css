@@ -1,0 +1,39 @@
+.post {
+  margin-top: 1rem;
+  border: 1px solid rgb(14, 18, 27);
+  padding: 1rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-primary);
+  width: 75vw;
+  transition: var(--nav-transition-speed);
+}
+.post h2 {
+  margin: 0;
+  text-shadow: 2px 2px black;
+  flex: 1;
+}
+.post:hover {
+  cursor: pointer;
+  color: var(--nav-icon-color);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 45%);
+}
+.postInfo {
+  font-size: 0.8rem;
+  text-shadow: 1px 1px black;
+}
+.admin {
+  margin-left: 1rem;
+}
+.published,
+.unpublished {
+  margin-left: 1rem;
+}
+.published {
+  color: var(--nav-icon-color);
+}
+.unpublished {
+  color: var(--nav-icon-disabled);
+}

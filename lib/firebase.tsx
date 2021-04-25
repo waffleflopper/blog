@@ -23,6 +23,8 @@ export const googleAuthProvider: firebase.auth.GoogleAuthProvider = new firebase
 export const firestore: firebase.firestore.Firestore = firebase.firestore();
 export const storage: firebase.storage.Storage = firebase.storage();
 
+export const fromMillis = firebase.firestore.Timestamp.fromMillis;
+
 export async function getUserWithUsername(username: string) {
   //get the users collection
   //query for username match
@@ -39,7 +41,7 @@ export function postToJSON(doc: firebase.firestore.QueryDocumentSnapshot) {
   const data = doc.data();
   return {
     ...data,
-    createdAt: data.createdAt.toMillis(),
-    updatedAt: data.updatedAt.toMillis(),
+    createdAt: data?.createdAt.toMillis() || 0,
+    updatedAt: data?.updatedAt.toMillis() || 0,
   };
 }
