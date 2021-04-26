@@ -12,6 +12,7 @@
 @media only screen and (max-width: 600px) {
   .main {
     margin: 0;
+    color: black;
   }
 }
 
@@ -43,7 +44,7 @@
 }
 
 .loginContainer button {
-  color: var(--color-text);
+  color: var(--color-button-text);
   outline: none;
   background-color: var(--nav-icon-color);
   border: 1px solid black;

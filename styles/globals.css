@@ -5,6 +5,7 @@
   font-family: "Open Sans";
   --color-bg: #141418;
   --color-text: #b6b6b6;
+  --color-button-text: #000000;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
 
@@ -50,6 +51,41 @@ a:visited {
 
 a:hover {
   text-decoration: underline;
+}
+
+button {
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--bg-primary);
+  border-radius: 0.25rem;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: var(--nav-transition-speed);
+  width: 7rem;
+}
+
+button:hover {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 20%);
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.loader {
+  border: 10px solid var(--bg-secondary);
+  border-top: 10px solid var(--bg-primary);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin 0.5s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media only screen and (max-width: 600px) {
